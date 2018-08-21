@@ -1,0 +1,33 @@
+.container {
+    text-align: center;
+}
+.nameDiv {
+    background-color: #424242;
+    color: white;
+    margin: 50px;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.contentDiv {
+    Display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    justify-content: space-between;
+    max-height: 400px;
+}
+.basics {
+    margin: 20px;
+    border: 1px solid black;
+}
+.story {
+    margin: 20px;
+    border: 1px solid black;
+}
+.picture {
+    margin: 20px;
+}
+img {
+    max-height: 300px;
+    border-radius: 300px;
+}

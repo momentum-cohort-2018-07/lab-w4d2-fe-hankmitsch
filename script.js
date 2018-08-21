@@ -1,34 +1,15 @@
 import request from 'superagent'
-// let form = document.getElementById('search-form')
-// let field = document.getElementById('search-term')
 
-// form.addEventListener('submit', event => {
-//   event.preventDefault()
-//   let searchTerm = window.encodeURIComponent(field.value)
 request.get('https://api.github.com/users/hankmitsch')
   .then(response => {
-    console.log(response)
+    displayInfo(response.body)
   })
-// })
 
-// function displayBookResults (results) {
-//   let books = results.items
-//   let output = '<h2>Results</h2>'
-//   for (let book of books) {
-//     output += `
-//     <div class="book">
-//       <figure>
-//         <img src="${book.volumeInfo.imageLinks.thumbnail}" alt="${book.volumeInfo.title}">
-//       </figure>
-//       <h3>${book.volumeInfo.title}</h3>
-//       <p><strong>Authors:</strong> ${book.volumeInfo.authors.join(', ')}</p>
-//       <p><strong>Description:</strong><br>
-//       ${book.volumeInfo.description}
-//       </p>
-
-//     </div>
-//     `
-//   }
-//   document.getElementById('output').innerHTML = output
-
-// }
+function displayInfo (input) {
+  document.getElementById('name').innerText = input.name
+  document.getElementById('bio').innerText = input.bio
+  document.getElementById('listOne').innerText = input.name
+  document.getElementById('listTwo').innerText = input.html_url
+  document.getElementById('listThree').innerText = 'placehold for email'
+  document.getElementById('picture').innerHTML = "<img src='https://avatars2.githubusercontent.com/u/41832300?v=4'>"
+}
